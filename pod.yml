@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myfirstpod
+  labels:
+    name: myapp
+spec:
+  containers:
+  - name: myfirstpod
+    image: aurangzeb099/simple-flaskapp1
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 5001
